@@ -1,0 +1,175 @@
+*{
+  transition: 0.4s;
+}
+
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  border: 2px solid blue;
+  max-width: 800px;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#search-input {
+  padding: 10px;
+  width: 60%;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#search-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+#search-btn {
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#search-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.meal-list {
+  width: 100%;
+  text-align: left;
+}
+
+.meal-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meal-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.meal-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.meal-item h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.meal-details {
+  text-align: left;
+}
+
+.meal-details img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.meal-details h2 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.meal-details p {
+  margin: 10px 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .search-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #search-input {
+    width: 100%;
+  }
+
+  #search-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .meal-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .meal-item img {
+    width: 100%;
+    height: auto;
+  }
+}
